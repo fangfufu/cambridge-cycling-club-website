@@ -1,0 +1,9 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^cambridge\-cycling\-club\.co\.uk$
+RewriteRule ^/?$ "https\:\/\/cambridge\-cycling\-club\.org\.uk\/" [R=301,L]
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} cambridge-cycling-club\.org\.uk [NC]
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://cambridge-cycling-club.org.uk/$1 [R,L]
