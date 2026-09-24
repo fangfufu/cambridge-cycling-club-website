@@ -8,6 +8,7 @@
 <meta name="author" content="Ken Miller">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="utf-8">
+<link rel="stylesheet" href="camcc-modern.css">
 <link rel="stylesheet" href="camcc.css">
 <link rel="stylesheet" href="menu.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -22,12 +23,20 @@
 
 <body class="w3-light-grey flex">
 
-<header>
-<a href="sitemap.htm" class="w3-left w3-padding-tiny">Sitemap</a>	
-<div class="w3-center">	
-<a href="index.htm"><img class="w3-image w3-card-4 w3-round-xlarge" title="Click for homepage" src="images/masthead.png" alt="Cambridge Cycling Club"></a>
-</div>
-</header>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.htm" class="brand-link" title="Cambridge Cycling Club Homepage">
+        <img src="images/logo-crest.png" alt="Cambridge Cycling Club Crest" class="brand-crest" width="52" height="44">
+        <div class="brand-text">
+          <span class="brand-name">CAMBRIDGE <span>CYCLING CLUB</span></span>
+          <span class="brand-tagline">Town &amp; County C.C. &bull; Est. 1880</span>
+        </div>
+      </a>
+      <div class="header-actions">
+        <a href="membership.htm" class="btn-join"><i class="fa fa-user-plus"></i> Join CCC</a>
+      </div>
+    </div>
+  </header>
 
 <nav w3-include-html="nav.html"></nav>
   
@@ -44,10 +53,64 @@
 
 </article>
 
-<footer>
-<a href="sitemap.htm" class="w3-blue w3-left w3-padding-tiny">Sitemap</a>
-<div class="w3-blue w3-center">Cambridge Cycling Club &copy; 2015-<script src="year.js"></script></div>
-</footer>
+  <!-- Modern Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+          <img src="images/logo-crest.png" alt="Cambridge CC Crest" width="44" height="37">
+          <span style="font-family: var(--font-heading); font-size: 1.15rem; font-weight: 800; color: #fff;">CAMBRIDGE CYCLING CLUB</span>
+        </div>
+        <p style="font-size: 0.9rem; line-height: 1.6; color: #94a3b8;">
+          Founded as Cambridge Town and County Cycling Club in 1880. Welcoming recreational and racing cyclists across Cambridgeshire.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h5>Rides &amp; Routes</h5>
+        <ul class="footer-links">
+          <li><a href="clubruns.htm">Sunday Club Runs</a></li>
+          <li><a href="routes.htm">GPS Route Library</a></li>
+          <li><a href="cafes.htm">Café Compendium</a></li>
+          <li><a href="audax.htm">Audax Cycling</a></li>
+          <li><a href="mtb.htm">Off-Road &amp; MTB</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Time Trials</h5>
+        <ul class="footer-links">
+          <li><a href="timetrial.htm">Time Trials Overview</a></li>
+          <li><a href="ttschedule.htm">Season Schedule</a></li>
+          <li><a href="ttresults.htm">Event Results</a></li>
+          <li><a href="clubrecords.htm">Club Records</a></li>
+          <li><a href="ttcourses.htm">Course Maps</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Club Info</h5>
+        <ul class="footer-links">
+          <li><a href="aboutus.htm">About Us</a></li>
+          <li><a href="membership.htm">Join Cambridge CC</a></li>
+          <li><a href="who.htm">Officers &amp; Committee</a></li>
+          <li><a href="clothing.htm">Club Kit &amp; Clothing</a></li>
+          <li><a href="newsletter.htm">Newsletters</a></li>
+          <li><a href="privacy.htm">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>
+        Cambridge Cycling Club &copy; 2015&ndash;<script src="year.js"></script>. All rights reserved.
+      </div>
+      <div>
+        <a href="sitemap.htm" style="color: #94a3b8; margin-right: 1.25rem;">Sitemap</a>
+        <a href="who.htm" style="color: #94a3b8;">Contact Us</a>
+      </div>
+    </div>
+  </footer>
 <script>
 w3.includeHTML();
 </script>

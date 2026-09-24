@@ -1,31 +1,21 @@
-/* Site Colours
-Blue = #0077EE
-Red = #DD0033
-Grey = grey
-Light Grey = #D3D3D3 or #ddd
-Page background (really light grey) = #F1F1F1
-White = #fff
-*/
-h1 {color:#0077EE;}
-h2 {color:#0077EE;}
-h3 {color:#0077EE;}
-h4 {color:#0077EE;}
-h5 {color:#0077EE;}
-h6 {color:#0077EE;}
+@import url('camcc-modern.css');
+
+/* Site Colours - Modernized Palette */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary, #0f172a);
+  font-family: var(--font-heading, sans-serif);
+}
+
 header, section, footer, aside, nav, main, article, figure {
   display: block;
-  margin:0px;
-  margin-bottom:1px;
-  padding:2px;
-    }
+}
 
 header {position:relative;}
 
-a:link, a:visited {color: #0077EE; text-decoration: none;}
+a:link, a:visited {color: var(--accent, #0284c7); text-decoration: none;}
+a:hover, a:active {color: var(--accent-hover, #0369a1); text-decoration: underline;}
 
-a:hover, a:active {color: #DD0033; text-decoration: none;}
-
-.frame {border:0; width:99%;}
+.frame {border:0; width:100%;}
 
 .flex {
   display: flex;

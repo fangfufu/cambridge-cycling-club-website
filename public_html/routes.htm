@@ -1,160 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>Cambridge Cycling Club</title>
-<meta name="Title" content="Cambridge Cycling Club">
-<meta name="description" content="cycling, biking, time trials, racing, touring, audax, club runs">
-<meta name="keywords" content="cycling, biking, time trials, racing, touring, audax, club runs">
-<meta name="Creator" content="Terry Dickerson">
-<meta name="author" content="Ken Miller">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta charset="utf-8">
-<link rel="stylesheet" href="camcc.css">
-<link rel="stylesheet" href="menu.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Club Run Routes (GPS) | Cambridge Cycling Club</title>
+  <meta name="description" content="Explore and download Cambridge Cycling Club GPS routes on RideWithGPS. Curated rides across East, West, North, and South Cambridgeshire.">
+  <meta name="keywords" content="cycling routes cambridge, ridewithgps club routes, cambridgeshire bike rides, gps cycle tracks">
+  
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="camcc-modern.css">
+  <link rel="stylesheet" href="camcc.css">
+  <link rel="stylesheet" href="menu.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <script src="w3.js"></script>
+  <script src="hamburger.js"></script>
+  
+  <style>
+    .route-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.65rem 0.85rem;
+      border-bottom: 1px solid var(--border-color);
+      transition: background 0.15s ease;
+    }
+    .route-item:last-child { border-bottom: none; }
+    .route-item:hover { background: var(--bg-surface-alt); }
+    .route-link {
+      font-weight: 600;
+      color: var(--primary);
+      text-decoration: none !important;
+    }
+    .route-link:hover { color: var(--accent); }
+    .route-dist {
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 0.2rem 0.55rem;
+      border-radius: var(--radius-full);
+      background: var(--accent-light);
+      color: var(--accent-hover);
+      white-space: nowrap;
+      margin-left: 0.75rem;
+    }
+  </style>
+</head>
+<body>
 
-<!--[if lt IE 9]>
-<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
-</script>
-<![endif]-->
-
-<script src="w3.js"></script>
-<script src="hamburger.js"></script>
-
-<body class="w3-light-grey flex">
-
-<header>
-<a href="sitemap.htm" class="w3-left w3-padding-tiny">Sitemap</a>	
-<div class="w3-center">	
-<a href="index.htm"><img class="w3-image w3-card-4 w3-round-xlarge" title="Click for homepage" src="images/masthead.png" alt="Cambridge Cycling Club"></a>
-</div>
-</header>
-
-<nav w3-include-html="nav.html"></nav>
-
-<article class="w3-container flex-content">
-<h4>Routes</h4>
-
-<p>The routes below link to the website RideWithGPS.com where you can download the route. Select "Send to Device" to the left of the screen and follow the instructions.</p>
-<p>When using RideWithGps to navigate, disable the recalculation mode for all routing options. Should you go Off Course retrace until you get the Course Found message. Should you have planned or downloaded a circular route that includes a café stop and have not disabled the recalculation mode, should you go Off Course on the way to the café, your device will create a route home rather than to the café.</p>
-<p>The sundry route "Accident Blackspots" shows as Points Of Interest those places where members are especially cautious. Should you be aware of additional hazards please <a href="mailto:web@cambridgecc.co.uk">let us know</a>.</p>
-
-<div class="w3-row w3-row-padding w3-section">
- <div class="w3-quarter">
-  <div class="w3-card-4 w3-center">
-   <h5>East</h5>
-    <div class="w3-container">
-<p><a href="https://ridewithgps.com/routes/11752359" target ="blank">Wet weather non-stop SE</a> - 42m</p>
-<p><a href="https://ridewithgps.com/routes/11744591" target ="blank">Wet weather non-stop NE</a> - 50m</p>
-<p><a href="https://ridewithgps.com/routes/8485623" target ="blank">La Hogue, Chippenham</a> - 55m</p>
-<p><a href="https://ridewithgps.com/routes/9612272" target ="blank">Sturmer Nurseries</a> - 56m</p>
-<p><a href="https://ridewithgps.com/routes/48294471" target ="blank">Porters Lodge, Cavenham</a> - 57m</p>
-<p><a href="https://ridewithgps.com/routes/10858939" target ="blank">Clare</a> - 59m</p>
-<p><a href="https://ridewithgps.com/routes/29716592" target ="blank">Tarka's, Baythorne End</a> - 61m</p>
-<p><a href="https://ridewithgps.com/routes/49664233" target ="blank">The Nook, Risby</a> - 62m</p>
-<p><a href="https://ridewithgps.com/routes/8464838" target ="blank">La Hogue, Chippenham</a> - 63m</p>
-<p><a href="https://ridewithgps.com/routes/7348686" target ="blank">Maglia Rosso, Hawstead</a> - 64m</p>
-<p><a href="https://ridewithgps.com/routes/10845256" target ="blank">Long Melford</a> - 66m</p>
-<p><a href="https://ridewithgps.com/routes/7056047" target ="blank">Maglia Rosso, Hawstead</a> - 67m</p>
-<p><a href="https://ridewithgps.com/routes/8522261" target ="blank">Guildhall, Lavenham</a> - 72m</p>
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.htm" class="brand-link" title="Cambridge Cycling Club Homepage">
+        <img src="images/logo-crest.png" alt="Cambridge Cycling Club Crest" class="brand-crest" width="52" height="44">
+        <div class="brand-text">
+          <span class="brand-name">CAMBRIDGE <span>CYCLING CLUB</span></span>
+          <span class="brand-tagline">Town &amp; County C.C. &bull; Est. 1880</span>
+        </div>
+      </a>
+      <div class="header-actions">
+        <a href="membership.htm" class="btn-join"><i class="fa fa-user-plus"></i> Join CCC</a>
+      </div>
     </div>
-  </div>
- </div>
- <div class="w3-quarter">
-  <div class="w3-card-4 w3-center">
-   <h5>West</h5>
-    <div class="w3-container">
-<p><a href="https://ridewithgps.com/routes/42894833" target ="_blank">Sandy (avoiding A1 RAB)</a> - 3m</p>
-<p><a href="https://ridewithgps.com/routes/11763628" target ="_blank">Wet weather non-stop NW</a> - 35m</p>
-<p><a href="https://ridewithgps.com/routes/11752545" target ="_blank">Wet weather non-stop SW</a> - 42m</p>
-<p><a href="https://ridewithgps.com/routes/8691895" target ="_blank">River Tea Room, St. Ives</a> - 48m</p>
-<p><a href="https://ridewithgps.com/routes/7043972" target ="_blank">Wood View, Gamlingay</a> - 50m</p>
-<p><a href="https://ridewithgps.com/routes/8465294" target ="_blank">Waresley Park Gdn Centre</a> - 52m</p>
-<p><a href="https://ridewithgps.com/routes/8481289" target ="_blank">Farrowby Farm, Hinxworth</a> - 55m</p>
-<p><a href="https://ridewithgps.com/routes/51919076" target ="_blank">Roxton Garden Centre</a> - 56m</p>
-<p><a href="https://ridewithgps.com/routes/44685315" target ="_blank">The Cowshed, Northill</a> - 59m</p>
-<p><a href="https://ridewithgps.com/routes/8481594" target ="_blank">Waresley Park Gdn Centre</a> - 60m</p>
-<p><a href="https://ridewithgps.com/routes/8485199" target ="_blank">Shuttleworth, Old Warden</a> - 63m</p>
-<p><a href="https://ridewithgps.com/routes/8520976" target ="_blank">Farrowby Farm, Hinxworth</a> - 65m</p>
-<p><a href="https://ridewithgps.com/routes/47266642" target ="_blank">Keysoe cafe, Keysoe</a> - 66m</p>
-<p><a href="https://ridewithgps.com/routes/48927728" target ="_blank">Keysoe cafe, Keysoe</a> - 67m</p>
-<p><a href="https://ridewithgps.com/routes/9751812" target ="_blank">Jordans Mill, Broom</a> - 67m</p>
-<p><a href="https://ridewithgps.com/routes/10888657" target ="_blank">Olivers, Kimbolton</a> - 67m</p>
-<p><a href="https://ridewithgps.com/routes/19565668" target ="_blank">Moggerhanger</a> - 68m</p>
-<p><a href="https://ridewithgps.com/routes/8465121" target ="_blank">Danish Camp, Willington</a> - 71m</p>
-<p><a href="https://ridewithgps.com/routes/31254833" target ="_blank">Emily's, Whitwell</a> - 80m</p>
-    </div>
-  </div>
- </div>
- <div class="w3-quarter">
-  <div class="w3-card-4 w3-center">
-   <h5>South</h5>
-    <div class="w3-container">
-<p><a href="https://ridewithgps.com/routes/11744446" target ="_blank">Wet weather non-stop</a> - 40m</p>
-<p><a href="https://ridewithgps.com/routes/9359656" target ="_blank">March Hare, Hare Street</a> - 53m</p>
-<p><a href="https://ridewithgps.com/routes/31323026" target ="_blank">Poppy's, Clavering</a> - 56m</p>
-<p><a href="https://ridewithgps.com/routes/8479990" target ="_blank">Elder Street/Debden</a> - 58m</p>
-<p><a href="https://ridewithgps.com/routes/44713004" target ="_blank">Yeomans, Stansted</a> - 59m</p>
-<p><a href="https://ridewithgps.com/routes/40327454" target ="_blank">Westmill, nr Buntingford</a> - 60m</p>
-<p><a href="https://ridewithgps.com/routes/20361115" target ="_blank">Esquires, Letchworth</a> - 61m</p>
-<p><a href="https://ridewithgps.com/routes/8481032" target ="_blank">Church Farm, Ardeley</a> - 63m</p>
-<p><a href="https://ridewithgps.com/routes/44698076" target ="_blank">Rosey Lea, Bishop's Stortford</a> - 63m</p>
-<p><a href="https://ridewithgps.com/routes/9292666" target ="_blank">Blue Egg, Gt Bardfield</a> - 64m</p>
-<p><a href="https://ridewithgps.com/routes/27303913" target ="_blank">Mill End Plants, Rushden</a> - 64m</p>
-<p><a href="https://ridewithgps.com/routes/12715007" target ="_blank">Andrewsfield, Stebbing</a> - 67m</p>	
-<p><a href="https://ridewithgps.com/routes/9891805" target ="_blank">Blue Egg, Gt Bardfield</a> - 70m</p>
-    </div>
-  </div>
- </div>
- <div class="w3-quarter">
-  <div class="w3-card-4 w3-center">
-   <h5>North</h5>
-    <div class="w3-container">
-<p><a href="https://ridewithgps.com/trips/15607239" target ="_blank">Crocodile Farm</a> - 52m</p>
-<p><a href="https://ridewithgps.com/routes/8465402" target ="_blank">Almonry, Ely</a> - 55m</p>
-<p><a href="https://ridewithgps.com/routes/12601775" target ="_blank">Grafham Water</a> - 60m</p>
-<p><a href="https://ridewithgps.com/routes/27143607" target ="_blank">Peacocks, Ely</a> - 64m</p>
-<p><a href="https://ridewithgps.com/routes/51690520" target ="_blank">Holly Lodge</a> - 69m</p>
-<p><a href="https://ridewithgps.com/routes/8481955" target ="_blank">Welney Wetland Centre</a> - 77m</p>
-    </div>
-  </div>
- </div>
-</div>
+  </header>
 
-<div class="w3-row-padding w3-section">
- <div>
-  <div class="w3-card-4 w3-center">
-   <h5>Sundry</h5>
-    <div class="w3-container">
-<p><a href="https://ridewithgps.com/routes/37576733" target ="_blank">Stowmarket to Sizewell</a></p>
-<p><a href="https://ridewithgps.com/routes/11973547" target ="_blank">Accident Blackspots</a></p>
-<p><a href="https://ridewithgps.com/routes/6154241" target ="_blank">Tour De France Stage 3 (to Epping) 7 July 2014</a> - 111m</p>
-<p><a href="https://ridewithgps.com/routes/54696886" target ="_blank">Kings Lynn-Wells-Hunstanton-Kings Lynn</a> - 71m</p>
-<p><a href="https://ridewithgps.com/routes/15727736" target ="_blank">Five Counties</a> - 90m</p>
-<p><a href="https://ridewithgps.com/routes/27769949" target ="_blank">Maldon/Heybridge Basin</a> - 105m</p>
-<p><a href="https://ridewithgps.com/routes/27768902" target ="_blank">Hunstanton</a> and
-   <a href="https://ridewithgps.com/routes/13825960" target ="_blank">Return</a> - 150m</p>
-<p><a href="https://ridewithgps.com/routes/7513337" target ="_blank">Lowestoft</a> and
-   <a href="https://ridewithgps.com/routes/7481209" target ="_blank">Return</a> - 196m</p>
-<p><a href="https://ridewithgps.com/routes/27736818" target ="_blank">50 mile ride</a></p>
-<p><a href="https://ridewithgps.com/routes/27736633" target ="_blank">75 mile ride</a></p>
-<p><a href="https://ridewithgps.com/routes/27736452" target ="_blank">90 mile ride</a></p>
-<p><a href="https://ridewithgps.com/routes/46384759" target ="_blank">Intro Ride North - 24m</a></p>
-<p><a href="https://ridewithgps.com/routes/46384491" target ="_blank">Intro Ride South - 21m</a></p>
-<p><a href="https://ridewithgps.com/routes/46384647" target ="_blank">Intro Ride East - 20m</a></p>
-<p><a href="https://ridewithgps.com/routes/46384539" target ="_blank">Intro Ride West - 24m></p>
-    </div>
-  </div>
- </div>
-</div>
-</article>
+  <!-- Navigation -->
+  <div w3-include-html="nav.html"></div>
 
-<footer>
-<a href="sitemap.htm" class="w3-blue w3-left w3-padding-tiny">Sitemap</a>
-<div class="w3-blue w3-center">Cambridge Cycling Club &copy; 2015-<script src="year.js"></script></div>
-</footer>
-<script>
-w3.includeHTML();
-</script>
+  <!-- Page Header -->
+  <section style="background: linear-gradient(135deg, #091224 0%, #1e293b 100%); color: #fff; padding: 3rem 1.25rem 2.5rem; text-align: center;">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <span class="badge" style="background: rgba(56, 189, 248, 0.2); color: #38bdf8; margin-bottom: 0.75rem;">Navigation &amp; GPX</span>
+      <h1 style="color: #fff; font-size: 2.5rem; margin-bottom: 0.75rem;">Club Run Routes</h1>
+      <p style="color: #cbd5e1; font-size: 1.15rem; margin: 0;">
+        Download curated routes directly to your Garmin, Wahoo, or cycling computer via RideWithGPS.
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="site-main">
+    <!-- GPS Advice Callout -->
+    <div class="callout" style="margin-bottom: 2.5rem;">
+      <h4 style="margin-bottom: 0.35rem; color: var(--primary);"><i class="fa fa-map-signs"></i> Using Routes with RideWithGPS</h4>
+      <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 0.5rem;">
+        Click any route link to open it on RideWithGPS. Select <strong>"Send to Device"</strong> on the left of your screen and follow device instructions.
+      </p>
+      <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0;">
+        <strong>Important Tip:</strong> When navigating circular routes with café stops, <em>disable auto-recalculation</em> on your GPS computer. If you go off-course with recalculation enabled, your device may reroute you straight home instead of via the café!
+      </p>
+    </div>
+
+    <!-- 4 Cardinal Directions Grid -->
+    <div class="grid grid-2" style="gap: 1.75rem; margin-bottom: 2.5rem;">
+      <!-- East Routes -->
+      <article class="card">
+        <div class="card-header">
+          <h4 style="color: var(--accent);"><i class="fa fa-compass"></i> East Routes</h4>
+          <span class="badge badge-blue">Newmarket / Suffolk</span>
+        </div>
+        <div class="card-body" style="padding: 0;">
+          <div class="route-item"><a href="https://ridewithgps.com/routes/11752359" target="_blank" rel="noopener" class="route-link">Wet weather non-stop SE</a><span class="route-dist">42m</span></div>
+          <div class="route-item"><a href="https://ridewithgps.com/routes/11744591" target="_blank" rel="noopener" class="route-link">Wet weather non-stop NE</a><span class="route-dist">50m</span></div>
+          <div class="route-item"><a href="https://ridewithgps.com/routes/8485623" target="_blank" rel="noopener" class="route-link">La Hogue, Chippenham</a><span class="route-dist">55m</span></div>
+          <div class="route-item"><a href="https://ridewithgps.com/routes/9612272" target="_blank" rel="noopener" class="route-link">Sturmer Nurseries</a><span class="route-dist">56m</span></div>
+          <div class="route-item"><a href="https://ridewithgps.com/routes/48294471" target="_blank" rel="noopener" class="route-link">Porters Lodge, Cavenham</a><span class="route-dist">57m</span></div>
+          <div class="route-item"><a href="https://ridewithgps.com/routes/10858939" target="_blank" rel="noopener" class="route-link">Clare</a><span class="route-dist">59m</span></div>
+          <div class="route-item"><a href="https://ridewithgps.com/routes/29716592" target="_blank" rel="noopener" class="route-link">Tarka's, Baythorne End</a><span class="route-dist">61m</span></div>
+          <div class="route-item"><a href="https://ridewithgps.com/routes/49664233" target="_blank" rel="noopener" class="route-link">The Nook, Risby</a><span class="route-dist">62m</span></div>
+          <div class="route-item"><a href="https://ridewithgps.com/routes/8464838" target="_blank" rel="noopener" class="route-link">La Hogue, Chippenham</a><span class="route-dist">63m</span></div>
+          <div class="route-item"><a href="https://ridewithgps.com/routes/7348686" target="_blank" rel="noopener" class="route-link">Maglia Rosso, Hawstead</a><span class="route-dist">64m</span></div>
+          <div class="route-item"><a href="https://ridewithgps.com/routes/10845256" target="_blank" rel="noopener" class="route-link">Long Melford</a><span class="route-dist">66m</span></div>
+          <div class="route-item"><a href="https://ridewithgps.com/routes/7056047" target="_blank" rel="noopener" class="route-link">Maglia Rosso, Hawstead</a><span class="route-dist">67m</span></div>
+          <div class="route-item"><a href="https://ridewithgps.com/routes/8522261" target="_blank" rel="noopener" class="route-link">Guildhall, Lavenham</a><span class="route-dist">72m</span></div>
+        </div>
+      </article>
+
+      <!-- West Routes -->
+      <article class="card">
+        <div class="card-header">
+          <h4 style="color: var(--accent);"><i class="fa fa-compass"></i> West Routes</h4>
+          <span class="badge badge-blue">Bedfordshire / Cambs</span>
+        </div>
+        <div class="card-body" style="padding: 0;">
+          <div class="route-item"><a href="https://ridewithgps.com/routes/42894833" target="_blank" rel="noopener" class="route-link">Sandy (avoiding A1 RAB)</a><span class="route-dist">3m</span></div>
+          <div class="route-item"><a href="https://ridewithgps.com/routes/11763628" target="_blank" rel="noopener" class="route-link">Wet weather non-stop NW</a><span class="route-dist">35m</span></div>
+          <div class="route-item"><a href="https://ridewithgps.com/routes/11752545" target="_blank" rel="noopener" class="route-link">Wet weather non-stop SW</a><span class="route-dist">42m</span></div>
+          <div class="route-item"><a href="https://ridewithgps.com/routes/8691895" target="_blank" rel="noopener" class="route-link">River Tea Room, St. Ives</a><span class="route-dist">48m</span></div>
+          <div class="route-item"><a href="https://ridewithgps.com/routes/7043972" target="_blank" rel="noopener" class="route-link">Wood View, Gamlingay</a><span class="route-dist">50m</span></div>
+          <div class="route-item"><a href="https://ridewithgps.com/routes/8465294" target="_blank" rel="noopener" class="route-link">Waresley Park Gdn Centre</a><span class="route-dist">52m</span></div>
+          <div class="route-item"><a href="https://ridewithgps.com/routes/8481289" target="_blank" rel="noopener" class="route-link">Farrowby Farm, Hinxworth</a><span class="route-dist">55m</span></div>
+          <div class="route-item"><a href="https://ridewithgps.com/routes/51919076" target="_blank" rel="noopener" class="route-link">Roxton Garden Centre</a><span class="route-dist">56m</span></div>
+          <div class="route-item"><a href="https://ridewithgps.com/routes/44685315" target="_blank" rel="noopener" class="route-link">The Cowshed, Northill</a><span class="route-dist">59m</span></div>
+          <div class="route-item"><a href="https://ridewithgps.com/routes/8481594" target="_blank" rel="noopener" class="route-link">Waresley Park Gdn Centre</a><span class="route-dist">60m</span></div>
+          <div class="route-item"><a href="https://ridewithgps.com/routes/8485199" target="_blank" rel="noopener" class="route-link">Shuttleworth, Old Warden</a><span class="route-dist">63m</span></div>
+          <div class="route-item"><a href="https://ridewithgps.com/routes/8520976" target="_blank" rel="noopener" class="route-link">Farrowby Farm, Hinxworth</a><span class="route-dist">65m</span></div>
+          <div class="route-item"><a href="https://ridewithgps.com/routes/47266642" target="_blank" rel="noopener" class="route-link">Keysoe cafe, Keysoe</a><span class="route-dist">66m</span></div>
+          <div class="route-item"><a href="https://ridewithgps.com/routes/48927728" target="_blank" rel="noopener" class="route-link">Keysoe cafe, Keysoe</a><span class="route-dist">67m</span></div>
+          <div class="route-item"><a href="https://ridewithgps.com/routes/9751812" target="_blank" rel="noopener" class="route-link">Jordans Mill, Broom</a><span class="route-dist">67m</span></div>
+          <div class="route-item"><a href="https://ridewithgps.com/routes/10888657" target="_blank" rel="noopener" class="route-link">Olivers, Kimbolton</a><span class="route-dist">67m</span></div>
+          <div class="route-item"><a href="https://ridewithgps.com/routes/19565668" target="_blank" rel="noopener" class="route-link">Moggerhanger</a><span class="route-dist">68m</span></div>
+          <div class="route-item"><a href="https://ridewithgps.com/routes/8465121" target="_blank" rel="noopener" class="route-link">Danish Camp, Willington</a><span class="route-dist">71m</span></div>
+          <div class="route-item"><a href="https://ridewithgps.com/routes/31254833" target="_blank" rel="noopener" class="route-link">Emily's, Whitwell</a><span class="route-dist">80m</span></div>
+        </div>
+      </article>
+
+      <!-- South Routes -->
+      <article class="card">
+        <div class="card-header">
+          <h4 style="color: var(--accent);"><i class="fa fa-compass"></i> South Routes</h4>
+          <span class="badge badge-blue">Herts / Essex</span>
+        </div>
+        <div class="card-body" style="padding: 0;">
+          <div class="route-item"><a href="https://ridewithgps.com/routes/11744446" target="_blank" rel="noopener" class="route-link">Wet weather non-stop</a><span class="route-dist">40m</span></div>
+          <div class="route-item"><a href="https://ridewithgps.com/routes/9359656" target="_blank" rel="noopener" class="route-link">March Hare, Hare Street</a><span class="route-dist">53m</span></div>
+          <div class="route-item"><a href="https://ridewithgps.com/routes/31323026" target="_blank" rel="noopener" class="route-link">Poppy's, Clavering</a><span class="route-dist">56m</span></div>
+          <div class="route-item"><a href="https://ridewithgps.com/routes/8479990" target="_blank" rel="noopener" class="route-link">Elder Street/Debden</a><span class="route-dist">58m</span></div>
+          <div class="route-item"><a href="https://ridewithgps.com/routes/44713004" target="_blank" rel="noopener" class="route-link">Yeomans, Stansted</a><span class="route-dist">59m</span></div>
+          <div class="route-item"><a href="https://ridewithgps.com/routes/40327454" target="_blank" rel="noopener" class="route-link">Westmill, nr Buntingford</a><span class="route-dist">60m</span></div>
+          <div class="route-item"><a href="https://ridewithgps.com/routes/20361115" target="_blank" rel="noopener" class="route-link">Esquires, Letchworth</a><span class="route-dist">61m</span></div>
+          <div class="route-item"><a href="https://ridewithgps.com/routes/8481032" target="_blank" rel="noopener" class="route-link">Church Farm, Ardeley</a><span class="route-dist">63m</span></div>
+          <div class="route-item"><a href="https://ridewithgps.com/routes/44698076" target="_blank" rel="noopener" class="route-link">Rosey Lea, Bishop's Stortford</a><span class="route-dist">63m</span></div>
+          <div class="route-item"><a href="https://ridewithgps.com/routes/9292666" target="_blank" rel="noopener" class="route-link">Blue Egg, Gt Bardfield</a><span class="route-dist">64m</span></div>
+          <div class="route-item"><a href="https://ridewithgps.com/routes/27303913" target="_blank" rel="noopener" class="route-link">Mill End Plants, Rushden</a><span class="route-dist">64m</span></div>
+          <div class="route-item"><a href="https://ridewithgps.com/routes/12715007" target="_blank" rel="noopener" class="route-link">Andrewsfield, Stebbing</a><span class="route-dist">67m</span></div>
+          <div class="route-item"><a href="https://ridewithgps.com/routes/9891805" target="_blank" rel="noopener" class="route-link">Blue Egg, Gt Bardfield</a><span class="route-dist">70m</span></div>
+        </div>
+      </article>
+
+      <!-- North Routes -->
+      <article class="card">
+        <div class="card-header">
+          <h4 style="color: var(--accent);"><i class="fa fa-compass"></i> North Routes</h4>
+          <span class="badge badge-blue">The Fens / Ely</span>
+        </div>
+        <div class="card-body" style="padding: 0;">
+          <div class="route-item"><a href="https://ridewithgps.com/trips/15607239" target="_blank" rel="noopener" class="route-link">Crocodile Farm</a><span class="route-dist">52m</span></div>
+          <div class="route-item"><a href="https://ridewithgps.com/routes/8465402" target="_blank" rel="noopener" class="route-link">Almonry, Ely</a><span class="route-dist">55m</span></div>
+          <div class="route-item"><a href="https://ridewithgps.com/routes/12601775" target="_blank" rel="noopener" class="route-link">Grafham Water</a><span class="route-dist">60m</span></div>
+          <div class="route-item"><a href="https://ridewithgps.com/routes/27143607" target="_blank" rel="noopener" class="route-link">Peacocks, Ely</a><span class="route-dist">64m</span></div>
+          <div class="route-item"><a href="https://ridewithgps.com/routes/51690520" target="_blank" rel="noopener" class="route-link">Holly Lodge</a><span class="route-dist">69m</span></div>
+          <div class="route-item"><a href="https://ridewithgps.com/routes/8481955" target="_blank" rel="noopener" class="route-link">Welney Wetland Centre</a><span class="route-dist">77m</span></div>
+        </div>
+      </article>
+    </div>
+
+    <!-- Sundry & Long Distance Rides -->
+    <article class="card" style="margin-bottom: 3.5rem;">
+      <div class="card-header">
+        <h4><i class="fa fa-star" style="color: #eab308;"></i> Intro &amp; Epic Sundry Rides</h4>
+        <span class="badge badge-green">Special Routes</span>
+      </div>
+      <div class="card-body" style="padding: 0;">
+        <div class="grid grid-2" style="gap: 0;">
+          <div style="border-right: 1px solid var(--border-color);">
+            <div class="route-item"><a href="https://ridewithgps.com/routes/46384647" target="_blank" rel="noopener" class="route-link">Intro Ride East</a><span class="route-dist">20m</span></div>
+            <div class="route-item"><a href="https://ridewithgps.com/routes/46384491" target="_blank" rel="noopener" class="route-link">Intro Ride South</a><span class="route-dist">21m</span></div>
+            <div class="route-item"><a href="https://ridewithgps.com/routes/46384759" target="_blank" rel="noopener" class="route-link">Intro Ride North</a><span class="route-dist">24m</span></div>
+            <div class="route-item"><a href="https://ridewithgps.com/routes/46384539" target="_blank" rel="noopener" class="route-link">Intro Ride West</a><span class="route-dist">24m</span></div>
+            <div class="route-item"><a href="https://ridewithgps.com/routes/27736818" target="_blank" rel="noopener" class="route-link">50 Mile Challenge Ride</a><span class="route-dist">50m</span></div>
+            <div class="route-item"><a href="https://ridewithgps.com/routes/27736633" target="_blank" rel="noopener" class="route-link">75 Mile Challenge Ride</a><span class="route-dist">75m</span></div>
+            <div class="route-item"><a href="https://ridewithgps.com/routes/27736452" target="_blank" rel="noopener" class="route-link">90 Mile Challenge Ride</a><span class="route-dist">90m</span></div>
+          </div>
+          <div>
+            <div class="route-item"><a href="https://ridewithgps.com/routes/11973547" target="_blank" rel="noopener" class="route-link">Accident Blackspots (Hazards)</a><span class="route-dist" style="background:#fee2e2; color:#b91c1c;">Caution</span></div>
+            <div class="route-item"><a href="https://ridewithgps.com/routes/54696886" target="_blank" rel="noopener" class="route-link">Kings Lynn &ndash; Wells &ndash; Hunstanton</a><span class="route-dist">71m</span></div>
+            <div class="route-item"><a href="https://ridewithgps.com/routes/15727736" target="_blank" rel="noopener" class="route-link">Five Counties Epic</a><span class="route-dist">90m</span></div>
+            <div class="route-item"><a href="https://ridewithgps.com/routes/27769949" target="_blank" rel="noopener" class="route-link">Maldon / Heybridge Basin</a><span class="route-dist">105m</span></div>
+            <div class="route-item"><a href="https://ridewithgps.com/routes/6154241" target="_blank" rel="noopener" class="route-link">Tour De France Stage 3 Route (2014)</a><span class="route-dist">111m</span></div>
+            <div class="route-item"><a href="https://ridewithgps.com/routes/27768902" target="_blank" rel="noopener" class="route-link">Hunstanton Coast &amp; Return</a><span class="route-dist">150m</span></div>
+            <div class="route-item"><a href="https://ridewithgps.com/routes/7513337" target="_blank" rel="noopener" class="route-link">Lowestoft &amp; Return</a><span class="route-dist">196m</span></div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <!-- Modern Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+          <img src="images/logo-crest.png" alt="Cambridge CC Crest" width="44" height="37">
+          <span style="font-family: var(--font-heading); font-size: 1.15rem; font-weight: 800; color: #fff;">CAMBRIDGE CYCLING CLUB</span>
+        </div>
+        <p style="font-size: 0.9rem; line-height: 1.6; color: #94a3b8;">
+          Founded as Cambridge Town and County Cycling Club in 1880. Welcoming recreational and racing cyclists across Cambridgeshire.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h5>Rides &amp; Routes</h5>
+        <ul class="footer-links">
+          <li><a href="clubruns.htm">Sunday Club Runs</a></li>
+          <li><a href="routes.htm">GPS Route Library</a></li>
+          <li><a href="cafes.htm">Café Compendium</a></li>
+          <li><a href="audax.htm">Audax Cycling</a></li>
+          <li><a href="mtb.htm">Off-Road &amp; MTB</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Time Trials</h5>
+        <ul class="footer-links">
+          <li><a href="timetrial.htm">Time Trials Overview</a></li>
+          <li><a href="ttschedule.htm">Season Schedule</a></li>
+          <li><a href="ttresults.htm">Event Results</a></li>
+          <li><a href="clubrecords.htm">Club Records</a></li>
+          <li><a href="ttcourses.htm">Course Maps</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Club Info</h5>
+        <ul class="footer-links">
+          <li><a href="aboutus.htm">About Us</a></li>
+          <li><a href="membership.htm">Join Cambridge CC</a></li>
+          <li><a href="who.htm">Officers &amp; Committee</a></li>
+          <li><a href="clothing.htm">Club Kit &amp; Clothing</a></li>
+          <li><a href="newsletter.htm">Newsletters</a></li>
+          <li><a href="privacy.htm">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>
+        Cambridge Cycling Club &copy; 2015&ndash;<script src="year.js"></script>. All rights reserved.
+      </div>
+      <div>
+        <a href="sitemap.htm" style="color: #94a3b8; margin-right: 1.25rem;">Sitemap</a>
+        <a href="who.htm" style="color: #94a3b8;">Contact Us</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    w3.includeHTML();
+  </script>
 </body>
 </html>
-
