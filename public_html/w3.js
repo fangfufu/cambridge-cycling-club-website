@@ -244,8 +244,12 @@ w3.includeHTML = function(cb) {
           elmnt.removeAttribute("w3-include-html");
           w3.includeHTML(cb);
         }
-      }      
-      xhttp.open("GET", file, true);
+      };
+      var fetchUrl = file;
+      if (!/[?&]v=/.test(file)) {
+        fetchUrl += (file.indexOf("?") === -1 ? "?" : "&") + "v=" + Date.now();
+      }
+      xhttp.open("GET", fetchUrl, true);
       xhttp.send();
       return;
     }

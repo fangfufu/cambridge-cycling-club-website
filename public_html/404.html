@@ -22,9 +22,8 @@
           <span class="brand-tagline">Town &amp; County C.C. &bull; Est. 1880</span>
         </div>
       </a>
-      <div class="header-actions">
-        <a href="membership.htm" class="btn-join"><i class="fa fa-user-plus"></i> Join CCC</a>
-      </div>
+      <!-- Integrated Navigation -->
+      <nav class="site-nav" id="siteNav" w3-include-html="nav.html"></nav>
     </div>
   </header>
 
@@ -48,8 +47,11 @@
     Cambridge Cycling Club &copy; 2015&ndash;<span id="year-val">2026</span>
   </footer>
 
+  <script src="w3.js"></script>
+  <script src="hamburger.js"></script>
   <script>
     document.getElementById('year-val').textContent = new Date().getFullYear();
+    w3.includeHTML();
   </script>
 </body>
 </html>
