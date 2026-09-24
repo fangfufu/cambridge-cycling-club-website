@@ -1,66 +1,83 @@
-<nav class="topnav" id="myTopnav" aria-label="Main Navigation">
-  <a href="index.htm"><i class="fa fa-home" style="margin-right: 4px;"></i> Home</a>	
-  
-  <div class="dropdown">
-    <button class="dropbtn" type="button">About <i class="fa fa-caret-down"></i></button>
-    <div class="dropdown-content">
-      <a href="aboutus.htm">About Us</a>
-      <a href="who.htm">Officers &amp; Committee</a>
-      <a href="trophies.htm">Club Trophies</a>
-      <a href="privacy.htm">Privacy Policy</a>
-      <a href="sitemap.htm">Sitemap</a>
-    </div>
+<div class="nav-wrapper">
+  <!-- Desktop & Mobile Navigation Links -->
+  <ul class="nav-list" id="mainNavList">
+    <li class="nav-item">
+      <a href="index.htm" class="nav-link"><i class="fa fa-home"></i> Home</a>
+    </li>
+    
+    <li class="nav-item has-dropdown">
+      <button class="nav-link nav-dropdown-btn" type="button" aria-haspopup="true" aria-expanded="false">
+        About <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-menu">
+        <a href="aboutus.htm">About Us</a>
+        <a href="who.htm">Officers &amp; Committee</a>
+        <a href="trophies.htm">Club Trophies</a>
+        <a href="privacy.htm">Privacy Policy</a>
+        <a href="sitemap.htm">Sitemap</a>
+      </div>
+    </li>
+
+    <li class="nav-item has-dropdown">
+      <button class="nav-link nav-dropdown-btn" type="button" aria-haspopup="true" aria-expanded="false">
+        Club Runs <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-menu">
+        <a href="clubruns.htm">Sunday Club Runs</a>
+        <a href="routes.htm">Route Library (GPS)</a>
+        <a href="cafes.htm">Café Compendium</a>
+      </div>
+    </li>
+
+    <li class="nav-item has-dropdown">
+      <button class="nav-link nav-dropdown-btn" type="button" aria-haspopup="true" aria-expanded="false">
+        Time Trials <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-menu">
+        <a href="timetrial.htm">Time Trials Overview</a>
+        <a href="ttschedule.htm">Season Schedule</a>
+        <a href="ttresults.htm">Event Results</a>
+        <a href="ttpoints.htm">Points Tables</a>
+        <a href="clubrecords.htm">Club Records</a>
+        <a href="ttcourses.htm">TT Courses</a>
+        <a href="tthelpers.htm">Helpers Schedule</a>
+        <a href="ttarchive.htm">Results Archive</a>
+      </div>
+    </li>
+
+    <li class="nav-item has-dropdown">
+      <button class="nav-link nav-dropdown-btn" type="button" aria-haspopup="true" aria-expanded="false">
+        Activities <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-menu">
+        <a href="mtb.htm">Off Road / Gravel &amp; MTB</a>
+        <a href="audax.htm">Audax &amp; Long Distance</a>
+        <a href="junior.htm">Juniors &amp; Youth</a>
+      </div>
+    </li>
+
+    <li class="nav-item has-dropdown">
+      <button class="nav-link nav-dropdown-btn" type="button" aria-haspopup="true" aria-expanded="false">
+        Resources <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-menu">
+        <a href="clothing.htm">Club Kit &amp; Clothing</a>
+        <a href="docstore.htm">Document Store</a>
+        <a href="newsletter.htm">Newsletters</a>
+        <a href="insurance.htm">Rider Insurance</a>
+      </div>
+    </li>
+
+    <li class="nav-item">
+      <a href="who.htm" class="nav-link">Contact</a>
+    </li>
+  </ul>
+
+  <!-- Actions on Header Right -->
+  <div class="nav-actions">
+    <a href="membership.htm" class="btn-join"><i class="fa fa-user-plus"></i> Join CCC</a>
+    <button class="nav-mobile-toggle" id="mobileMenuBtn" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+      <i class="fa fa-bars"></i>
+    </button>
   </div>
-
-  <div class="dropdown">
-    <button class="dropbtn" type="button">Club Runs <i class="fa fa-caret-down"></i></button>
-    <div class="dropdown-content">
-      <a href="clubruns.htm">Sunday Club Runs</a>
-      <a href="routes.htm">Route Library (GPS)</a>
-      <a href="cafes.htm">Café Compendium</a>
-    </div>
-  </div>
-
-  <div class="dropdown">
-    <button class="dropbtn" type="button">Time Trials <i class="fa fa-caret-down"></i></button>
-    <div class="dropdown-content">
-      <a href="timetrial.htm">Time Trials Overview</a>
-      <a href="ttschedule.htm">Season Schedule</a>
-      <a href="ttresults.htm">Event Results</a>
-      <a href="ttpoints.htm">Points Tables</a>
-      <a href="clubrecords.htm">Club Records</a>
-      <a href="ttcourses.htm">TT Courses</a>
-      <a href="tthelpers.htm">Helpers Schedule</a>
-      <a href="ttarchive.htm">Results Archive</a>
-    </div>
-  </div>
-
-  <div class="dropdown">
-    <button class="dropbtn" type="button">Riding &amp; Activities <i class="fa fa-caret-down"></i></button>
-    <div class="dropdown-content">
-      <a href="mtb.htm">Off Road / Gravel &amp; MTB</a>
-      <a href="audax.htm">Audax &amp; Long Distance</a>
-      <a href="junior.htm">Juniors &amp; Youth</a>
-    </div>
-  </div>
-
-  <div class="dropdown">
-    <button class="dropbtn" type="button">Resources <i class="fa fa-caret-down"></i></button>
-    <div class="dropdown-content">
-      <a href="clothing.htm">Club Kit &amp; Clothing</a>
-      <a href="docstore.htm">Document Store</a>
-      <a href="newsletter.htm">Newsletters</a>
-      <a href="insurance.htm">Rider Insurance</a>
-    </div>
-  </div>
-
-  <a href="who.htm">Contact</a>
-
-  <a href="membership.htm" style="background: var(--racing-red, #e11d48); color: #fff !important; font-weight: 700; border-radius: 9999px; padding: 0.45rem 1rem; margin-left: auto;">
-    <i class="fa fa-user-plus" style="margin-right: 4px;"></i> Join CCC
-  </a>
-   
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()" aria-label="Toggle navigation menu">
-    <i class="fa fa-bars"></i>
-  </a>
-</nav>
+</div>

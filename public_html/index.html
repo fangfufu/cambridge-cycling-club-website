@@ -21,6 +21,7 @@
 <body>
 
   <!-- Site Header with Branding & Navigation -->
+    <!-- Integrated Site Header with Branding & Navigation -->
   <header class="site-header">
     <div class="header-inner">
       <a href="index.htm" class="brand-link" title="Cambridge Cycling Club Homepage">
@@ -30,14 +31,11 @@
           <span class="brand-tagline">Town &amp; County C.C. &bull; Est. 1880</span>
         </div>
       </a>
-      <div class="header-actions">
-        <a href="membership.htm" class="btn-join"><i class="fa fa-user-plus"></i> Join CCC</a>
-      </div>
+      
+      <!-- Integrated Navigation -->
+      <nav class="site-nav" id="siteNav" w3-include-html="nav.html"></nav>
     </div>
   </header>
-
-  <!-- Navigation Bar (Included dynamically for sitewide consistency) -->
-  <div w3-include-html="nav.html"></div>
 
   <!-- Hero Section -->
   <section class="hero-section">

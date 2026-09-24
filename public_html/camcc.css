@@ -23,7 +23,12 @@ a:hover, a:active {color: var(--accent-hover, #0369a1); text-decoration: underli
   flex-direction: column;
 }
 .flex-content {
-  flex: auto;
+  flex: 1 0 auto;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+  box-sizing: border-box;
 }
 
 /* W3.CSS 4.13 June 2019 by Jan Egil and Borge Refsnes */
