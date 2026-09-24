@@ -1,33 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>Cambridge Cycling Club</title>
-<meta name="Title" content="Cambridge Cycling Club">
-<meta name="description" content="cycling, biking, time trials, racing, touring, audax, club runs">
-<meta name="keywords" content="cycling, biking, time trials, racing, touring, audax, club runs">
-<meta name="Creator" content="Terry Dickerson">
-<meta name="author" content="Ken Miller">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta charset="utf-8">
-<link rel="stylesheet" href="camcc-modern.css">
-<link rel="stylesheet" href="camcc.css">
-<link rel="stylesheet" href="menu.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Time Trial Rider Archive | Cambridge Cycling Club</title>
+  <meta name="description" content="Search individual Cambridge Cycling Club time trial results, personal records, and season histories from 2015 to the present day.">
+  <meta name="keywords" content="cambridge cycling club tt archive, time trial rider results, club time trial history, cycling spreadsheet">
+  
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="camcc-modern.css">
+  <link rel="stylesheet" href="camcc.css">
+  <link rel="stylesheet" href="menu.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <script src="w3.js"></script>
+  <script src="hamburger.js"></script>
+</head>
+<body>
 
-<!--[if lt IE 9]>
-<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
-</script>
-<![endif]-->
-
-<script src="w3.js"></script>
-<script src="hamburger.js"></script>
-
-<body class="w3-light-grey flex">
-
-    <!-- Integrated Site Header with Branding & Navigation -->
+  <!-- Site Header -->
   <header class="site-header">
     <div class="header-inner">
       <a href="index.htm" class="brand-link" title="Cambridge Cycling Club Homepage">
-        <img src="images/logo-crest.png" alt="Cambridge Cycling Club Crest" class="brand-crest" width="52" height="44">
+        <img src="images/logo-crest.png" alt="Cambridge Cycling Club Crest" width="52" height="44">
         <div class="brand-text">
           <span class="brand-name">CAMBRIDGE <span>CYCLING CLUB</span></span>
           <span class="brand-tagline">Town &amp; County C.C. &bull; Est. 1880</span>
@@ -39,29 +34,105 @@
     </div>
   </header>
 
-<article class="w3-container flex-content">
-	
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="page-header-inner">
+      <span class="badge" style="background: rgba(225, 29, 72, 0.25); color: #fda4af; margin-bottom: 0.75rem;">Time Trials &bull; Historical Records &bull; 2015&ndash;Present</span>
+      <h1>Time Trial Rider Archive</h1>
+      <p>
+        Look up historical times, course records, and individual race performances for every club rider since 2015.
+      </p>
+    </div>
+  </section>
 
-<h4>Club Time Trials - Rider Archive</h4>
-            
-<p><a href="https://docs.google.com/spreadsheets/d/1uY-o7_6bx8WMRuB2S5qka1ho6s6-Bl3u/edit#gid=574049439" target="_blank">This link</a> will open a Google Spreadsheet showing riders' results going back to 2015. To display an individual rider's results the data will need to be filtered as follows:</p>
+  <!-- Main Content -->
+  <main class="site-main">
+    
+    <div class="grid grid-2" style="gap: 2.5rem; align-items: start;">
+      
+      <!-- Tutorial & Instructions -->
+      <div>
+        <div class="card" style="padding: 2rem;">
+          <span class="badge badge-blue">Filter Guide</span>
+          <h2 style="font-size: 1.75rem; margin-top: 0.5rem; color: var(--primary);">How to Filter Rider Records</h2>
+          <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
+            The Rider Archive is maintained in an interactive cloud database. To view an individual rider's career results without affecting other users, create a temporary filter view using these steps:
+          </p>
 
+          <div class="step-list">
+            <div class="step-item">
+              <span class="step-num">1</span>
+              <div class="step-content">Click the button below to launch the archive spreadsheet in a new browser tab.</div>
+            </div>
+            <div class="step-item">
+              <span class="step-num">2</span>
+              <div class="step-content">Allow a few seconds for all season tabs and formulas to load.</div>
+            </div>
+            <div class="step-item">
+              <span class="step-num">3</span>
+              <div class="step-content">Click the <strong>Filter View</strong> button located next to the blue <em>View Only</em> indicator.</div>
+            </div>
+            <div class="step-item">
+              <span class="step-num">4</span>
+              <div class="step-content">Select <strong>"Create New Temporary Filter View"</strong> from the dropdown menu.</div>
+            </div>
+            <div class="step-item">
+              <span class="step-num">5</span>
+              <div class="step-content">Click the filter arrow that appears on the right side of the <strong>Name</strong> header in cell A1.</div>
+            </div>
+            <div class="step-item">
+              <span class="step-num">6</span>
+              <div class="step-content">In the popup menu, choose <strong>Filter by Values</strong> and click <strong>Clear</strong> to deselect all riders.</div>
+            </div>
+            <div class="step-item">
+              <span class="step-num">7</span>
+              <div class="step-content">Search or scroll to find your desired rider name, check the box next to it, and click OK.</div>
+            </div>
+            <div class="step-item">
+              <span class="step-num">8</span>
+              <div class="step-content">When finished reviewing times, simply close the browser tab.</div>
+            </div>
+          </div>
 
-    <img class="w3-image w3-right w3-card-4 w3-round-large w3-margin"
-         src="images/ttarchive.jpg" alt="Image of spreadsheet" title="Rider Archive Spreadsheet">
-	
-<ul class="w3-ul" style="width:50%;">
-<li>Wait for the sheet to load</li>
-<li>Locate the Filter View button which is adjacent to the (blue) View Only button</li>
-<li>Select the Filter View button and from the drop-down select Create New Temporary Filter View</li>
-<li>Click on the arrow that appears to the right of the Name in cell A1</li>
-<li>In the dialog box go to Filter by Values and select Clear</li>
-<li>This action will de-select the rider names</li>
-<li>From the list select the name of the rider you wish to view</li>
-<li>When you are done, simply close the spreadsheet</li>
-</ul>
+          <div style="margin-top: 1.5rem;">
+            <a href="https://docs.google.com/spreadsheets/d/1uY-o7_6bx8WMRuB2S5qka1ho6s6-Bl3u/edit#gid=574049439" target="_blank" class="btn btn-primary" style="width: 100%;">
+              <i class="fa fa-table"></i> Open TT Rider Archive Spreadsheet &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
 
-</article>
+      <!-- Preview Image Card -->
+      <div>
+        <div class="card" style="overflow: hidden; box-shadow: var(--shadow-md);">
+          <div class="card-header" style="background: var(--bg-surface-alt);">
+            <div style="font-weight: 700; color: var(--primary);">
+              <i class="fa fa-picture-o" style="color: var(--accent); margin-right: 0.35rem;"></i> Spreadsheet Interface
+            </div>
+            <span class="badge badge-gray">Visual Reference</span>
+          </div>
+          <img src="images/ttarchive.jpg" alt="Google Sheets Temporary Filter View interface preview" style="width: 100%; height: auto; display: block;">
+          <div class="card-footer" style="font-size: 0.85rem; color: var(--text-muted);">
+            <i class="fa fa-info-circle"></i> Create a temporary filter view in Google Sheets to isolate individual rider times.
+          </div>
+        </div>
+
+        <div class="card" style="padding: 1.5rem; margin-top: 1.5rem;">
+          <h4 style="font-size: 1.1rem; color: var(--primary); margin-bottom: 0.5rem;">Looking for Season Standings?</h4>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">
+            Check our season results and annual championship points tables:
+          </p>
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+            <a href="ttresults.htm" class="btn btn-outline btn-sm"><i class="fa fa-list-ol"></i> Event Results</a>
+            <a href="ttpoints.htm" class="btn btn-outline btn-sm"><i class="fa fa-bar-chart"></i> Points Tables</a>
+            <a href="clubrecords.htm" class="btn btn-outline btn-sm"><i class="fa fa-star"></i> Club Records</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
 
   <!-- Modern Site Footer -->
   <footer class="site-footer">
@@ -121,8 +192,9 @@
       </div>
     </div>
   </footer>
-<script>
-w3.includeHTML();
-</script>
+
+  <script>
+    w3.includeHTML();
+  </script>
 </body>
 </html>

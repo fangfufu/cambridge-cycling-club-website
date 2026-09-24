@@ -1,33 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>Cambridge Cycling Club</title>
-<meta name="Title" content="Cambridge Cycling Club">
-<meta name="description" content="cycling, biking, time trials, racing, touring, audax, club runs">
-<meta name="keywords" content="cycling, biking, time trials, racing, touring, audax, club runs">
-<meta name="Creator" content="Terry Dickerson">
-<meta name="author" content="Ken Miller">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta charset="utf-8">
-<link rel="stylesheet" href="camcc-modern.css">
-<link rel="stylesheet" href="camcc.css">
-<link rel="stylesheet" href="menu.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Café Compendium | Cambridge Cycling Club</title>
+  <meta name="description" content="Explore the Cambridge Cycling Club Cafe Compendium. An interactive map of tested, cyclist-friendly cafe stops across Cambridgeshire and neighboring counties.">
+  <meta name="keywords" content="cycling cafes cambridge, bike cafe map, cafe compendium, cycling coffee stops, sunday club run cafes">
+  
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="camcc-modern.css">
+  <link rel="stylesheet" href="camcc.css">
+  <link rel="stylesheet" href="menu.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <script src="w3.js"></script>
+  <script src="hamburger.js"></script>
+</head>
+<body>
 
-<!--[if lt IE 9]>
-<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
-</script>
-<![endif]-->
-
-<script src="w3.js"></script>
-<script src="hamburger.js"></script>
-
-<body class="w3-light-grey flex">
-
-    <!-- Integrated Site Header with Branding & Navigation -->
+  <!-- Site Header -->
   <header class="site-header">
     <div class="header-inner">
       <a href="index.htm" class="brand-link" title="Cambridge Cycling Club Homepage">
-        <img src="images/logo-crest.png" alt="Cambridge Cycling Club Crest" class="brand-crest" width="52" height="44">
+        <img src="images/logo-crest.png" alt="Cambridge Cycling Club Crest" width="52" height="44">
         <div class="brand-text">
           <span class="brand-name">CAMBRIDGE <span>CYCLING CLUB</span></span>
           <span class="brand-tagline">Town &amp; County C.C. &bull; Est. 1880</span>
@@ -39,22 +34,62 @@
     </div>
   </header>
 
-<article class="w3-container w3-center flex-content">
-	
-<h6 class="w3-hide">Heading</h6><!-- Included for page validation -->
-	
-<p>If you are futher afield <a href="https://cafes.cyclingmaps.net/" target="_blank">this site</a> may be of interest</p>	
-<iframe src="https://www.easymapmaker.com/map/31bde520bc5a8bdc8524e2508c19ec69" style="border-width:0; width:100%; height:880px;"></iframe>	
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="page-header-inner">
+      <span class="badge" style="background: rgba(56, 189, 248, 0.2); color: #38bdf8; margin-bottom: 0.75rem;">Club Runs &bull; Tea &amp; Cake &bull; Pit Stops</span>
+      <h1>Café Compendium</h1>
+      <p>
+        An interactive guide to tried, tested, and cyclist-friendly cafés across Cambridgeshire, Hertfordshire, Essex, and Suffolk.
+      </p>
+    </div>
+  </section>
 
-<!--easymapmaker.com used to create cafe compendium web page.
+  <!-- Main Content -->
+  <main class="site-main">
+    
+    <!-- Info & External Links Card -->
+    <div class="card" style="margin-bottom: 2rem; padding: 1.5rem 1.75rem;">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+        <div>
+          <h3 style="font-size: 1.35rem; margin-bottom: 0.35rem; color: var(--primary);">
+            <i class="fa fa-coffee" style="color: var(--accent); margin-right: 0.4rem;"></i> Fuel for the Ride
+          </h3>
+          <p style="margin: 0; color: var(--text-muted); font-size: 0.95rem;">
+            Discover favourite cake, coffee, and lunch stops tested on Sunday club runs. Heading further afield? Explore the national cycling café directory.
+          </p>
+        </div>
+        <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+          <a href="https://cafes.cyclingmaps.net/" target="_blank" class="btn btn-primary btn-sm">
+            <i class="fa fa-external-link"></i> National Café Map &rarr;
+          </a>
+          <a href="clubruns.htm" class="btn btn-outline btn-sm">
+            <i class="fa fa-bicycle"></i> Sunday Runs Info
+          </a>
+        </div>
+      </div>
+    </div>
 
-Club Google sheet data: -
-https://docs.google.com/spreadsheets/d/1SjS6nVuDGBtRc1_COMy5zXxvPkecWoigMMmDOYUw5fg/edit#gid=1753947661
+    <!-- Interactive Map Card -->
+    <div class="card" style="overflow: hidden; border-radius: var(--radius-lg); box-shadow: var(--shadow-md);">
+      <div class="card-header" style="background: var(--bg-surface-alt);">
+        <div style="font-weight: 700; color: var(--primary); display: flex; align-items: center; gap: 0.5rem;">
+          <i class="fa fa-map-marker" style="color: var(--racing-red);"></i> Interactive Café Map
+        </div>
+        <span class="badge badge-blue">Curated by Cambridge CC</span>
+      </div>
+      <div style="padding: 0; position: relative;">
+        <iframe src="https://www.easymapmaker.com/map/31bde520bc5a8bdc8524e2508c19ec69" style="border: 0; width: 100%; height: 880px; display: block;" title="Cambridge Cycling Club Cafe Compendium Map"></iframe>
+      </div>
+    </div>
 
-Copy/paste google sheet data to easymapmaker: -
-https://www.easymapmaker.com/edit/31bde520bc5a8bdc8524e2508c19ec69/16067422ea40a1-->
+    <!-- easymapmaker.com used to create cafe compendium web page.
+         Club Google sheet data:
+         https://docs.google.com/spreadsheets/d/1SjS6nVuDGBtRc1_COMy5zXxvPkecWoigMMmDOYUw5fg/edit#gid=1753947661
+         Copy/paste google sheet data to easymapmaker:
+         https://www.easymapmaker.com/edit/31bde520bc5a8bdc8524e2508c19ec69/16067422ea40a1 -->
 
-</article>
+  </main>
 
   <!-- Modern Site Footer -->
   <footer class="site-footer">
@@ -114,9 +149,9 @@ https://www.easymapmaker.com/edit/31bde520bc5a8bdc8524e2508c19ec69/16067422ea40a
       </div>
     </div>
   </footer>
-<script>
-w3.includeHTML();
-</script>
+
+  <script>
+    w3.includeHTML();
+  </script>
 </body>
 </html>
-
