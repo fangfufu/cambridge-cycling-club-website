@@ -7,3 +7,6 @@ RewriteEngine On
 RewriteCond %{HTTP_HOST} cambridge-cycling-club\.org\.uk [NC]
 RewriteCond %{SERVER_PORT} 80
 RewriteRule ^(.*)$ https://cambridge-cycling-club.org.uk/$1 [R,L]
+
+# Redirect legacy .htm URLs to .html
+RewriteRule ^(.*)\.htm$ https://cambridge-cycling-club.org.uk/$1.html [R=301,L]

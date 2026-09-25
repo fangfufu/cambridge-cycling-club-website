@@ -32,9 +32,6 @@ jobs:
 
       - name: Prepare static files
         run: |
-          if [ -f public_html/index.htm ]; then
-            cp -f public_html/index.htm public_html/index.html
-          fi
           if [ -f public_html/404.shtml ] && [ ! -f public_html/404.html ]; then
             cp -f public_html/404.shtml public_html/404.html
           fi
